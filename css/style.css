@@ -17,21 +17,31 @@ ul{
 
 main{
     background-color: red;
+}
+.wrap{
+    display:flex;
+   }
+   .box{
+    width: 31%;
+    margin: 1%;
+    background-color: #eee;
     text-align: center;
-    
-}
-
-
-.content{
- background-color: yellow;
- width:30%;
- display: inline-block;
- height: auto;
- width: 500px;
-}
+   }
 
 footer {
     margin-top: auto;
     background-color: green;
     text-align: center;
 }
+
+img {
+    object-fit: cover;
+    width: 500px;
+    height: 400px;
+  }
+
+  .boxlist{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 50px;
+  }

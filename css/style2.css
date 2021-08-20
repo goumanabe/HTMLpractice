@@ -1,0 +1,320 @@
+header{
+  background-color: whitesmoke;
+  text-align: center;
+}
+header h1{
+  font-size: 50px;
+}
+.list{
+  text-align: right;
+  font-size: 25px;
+}
+
+ul{
+list-style: none;
+}
+
+/* 表示画面 */
+#stage {
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/*全ての写真を水平一列に格納したdiv、#photosに,
+スライドショーの animation を設定*/
+#photos {
+	position:absolute;
+	top:0;
+	width:100%;
+	animation: imgPassToLeft0 30s infinite;
+	-webkit-animation: imgPassToLeft0 30s infinite;
+}
+/*各写真の並び位置を設定
+#photo1, #photo2, #photo3, #photo4, #photo5 */
+#photo0 { left:  0%; }
+#photo1 { left:100%; } 
+#photo2 { left:200%; }
+#photo3 { left:300%; }
+#photo4 { left:400%; }
+#photo5 { left:500%; }
+#photo6 { left:600%; }
+.pic { position:absolute;top:0;width:100%; }
+/*写真サイズを可変に*/
+.pic img { width:100%; }
+
+/* 全てのラジオボタンを非表示に */
+#back1,#back2,#back3,#back4,#back5,#next1,#next2,#next3,#next4,#next5{
+	display: none;
+}
+/*送りボタン文字（＜、＞）の設定*/
+.b_left span, .b_right span {
+	position: absolute;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	opacity:0;
+	top: 40%;
+	color:#EEE;
+}
+.b_left span {
+	left: 5%;;	
+}
+.b_right span {
+	left: 85%;
+}
+/*ボタン文字hover時の設定*/
+.pic:hover > label div span {
+	opacity:1;
+	color:#EEE;
+}
+.pic label div span:hover {
+	color:#f00;
+	cursor:pointer;
+}
+/* 各送りボタンクリック時のanimation設定 */
+#next1:checked ~ #photos {
+	animation: imgPassToLeft1 30s infinite;	
+	animation-delay: -4.8s;
+	-webkit-animation: imgPassToLeft1 30s infinite;	
+	-webkit-animation-delay: -4.8s;
+}
+#next2:checked ~ #photos {	
+	animation: imgPassToLeft2 30s infinite;
+	animation-delay: -10.8s;
+	-webkit-animation: imgPassToLeft2 30s infinite;
+	-webkit-animation-delay: -10.8s;
+}
+#next3:checked ~ #photos {
+	animation: imgPassToLeft3 30s infinite;
+	animation-delay: -16.8s;
+	-webkit-animation: imgPassToLeft3 30s infinite;
+	-webkit-animation-delay: -16.8s;
+}
+#next4:checked ~ #photos {
+	animation: imgPassToLeft4 30s infinite;
+	animation-delay: -22.8s;
+	-webkit-animation: imgPassToLeft4 30s infinite;
+	-webkit-animation-delay: -22.8s;
+}
+#next5:checked ~ #photos {
+	animation: imgPassToLeft5 30s infinite;
+	animation-delay: -28.8s;
+	-webkit-animation: imgPassToLeft5 30s infinite;
+	-webkit-animation-delay: -28.8s;
+}
+#back1:checked ~ #photos {
+	animation: toRight1 6s 0s forwards, imgPassToRight1 30s 6s infinite;
+}
+#back2:checked ~ #photos {
+	animation: toRight2 6s 0s forwards, imgPassToRight2 30s 6s infinite;
+}
+#back3:checked ~ #photos {
+	animation: toRight3 6s 0s forwards, imgPassToRight3 30s 6s infinite;
+}
+#back4:checked ~ #photos {
+	animation: toRight4 6s 0s forwards, imgPassToRight4 30s 6s infinite;
+}
+#back5:checked ~ #photos {
+	animation: toRight5 6s 0s forwards, imgPassToRight5 30s 6s infinite;
+}
+/* animation設定 */
+@keyframes imgPassToLeft0 {
+	0%  { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToLeft0 {
+	0%  { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft1 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToLeft1 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft2 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft3 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft4 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft5 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToRight1 {
+	0% { left: 0%; }
+	4% { left: -100%; }
+	20% { left:-100%; }
+	24% { left:-200%; }
+	40% { left:-200%; }
+	44% { left:-300%; }
+	60% { left:-300%; }
+	64% { left:-400%; }
+	80% { left:-400%; }
+	84% { left:-500%; }
+	100% { left:-500%; }
+}
+@keyframes imgPassToRight2 {
+	0% { left: -100%; }
+	4% { left: -200%; }
+	20% { left:-200%; }
+	24% { left:-300%; }
+	40% { left:-300%; }
+	44% { left:-400%; }
+	60% { left:-400%; }
+	64% { left:-500%; }
+	80% { left:-500%; }
+	83.999% { left:-600%; }
+	84% { left:-100%; }
+	100% { left:-100%; }
+}
+@keyframes imgPassToRight3 {
+	0% { left: -200%; }
+	4% { left: -300%; }
+	20% { left:-300%; }
+	24% { left:-400%; }
+	40% { left:-400%; }
+	44% { left:-500%; }
+	60% { left:-500%; }
+	63.999% { left:-600%; }
+	64% { left:-100%; }
+	80% { left:-100%; }
+	84% { left:-200%; }
+	100% { left:-200%; }
+}
+@keyframes imgPassToRight4 {
+	0% { left: -300%; }
+	4% { left: -400%; }
+	20% { left:-400%; }
+	24% { left:-500%; }
+	40% { left:-500%; }
+	43.999% { left:-600%; }
+	44% { left:-100%; }
+	60% { left:-100%; }
+	64% { left:-200%; }
+	80% { left:-200%; }
+	84% { left:-300%; }
+	100% { left:-300%; }
+}
+@keyframes imgPassToRight5 {
+	0% { left: -400%; }
+	4% { left: -500%; }
+	20% { left:-500%; }
+	23.999% { left:-600%; }
+	24% { left:-100%; }
+	40% { left:-100%; }
+	44% { left:-200%; }
+	60% { left:-200%; }
+	64% { left:-300%; }
+	80% { left:-300%; }
+	84% { left:-400%; }
+	100% { left:-400%; }
+}
+@keyframes toRight1 {
+	0% { left:-100%; }
+	19.999% { left:0%; }
+	20% { left: -500%; }
+	100% { left:-500%; display:none;}
+}
+@keyframes toRight2 {
+	0% { left:-200%; }
+	20% { left: -100%; }
+	100% { left:-100%; display:none;}
+}
+@keyframes toRight3 {
+	0% { left:-300%; }
+	20% { left: -200%; }
+	100% { left:-200%; display:none;}
+}
+@keyframes toRight4 {
+	0% { left:-400%; }
+	20% { left: -300%; }
+	100% { left: -300%; display:none;}
+}
+@keyframes toRight5 {
+	0% { left:-500%; }
+	20% { left: -400%; }
+	100% { left: -400%; display:none;}
+}

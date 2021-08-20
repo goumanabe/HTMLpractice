@@ -1,7 +1,6 @@
 header{
     background-color: whitesmoke;
     text-align: center;
-    
 }
 header h1{
     font-size: 50px;
@@ -44,4 +43,9 @@ img {
     text-align: center;
     padding-top: 100px;
     font-size: 50px;
+  }
+
+  .next{
+    text-align: right;
+    background-color: yellow;
   }

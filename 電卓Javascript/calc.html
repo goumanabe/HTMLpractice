@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>電卓をつくろう</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <img id="gazo" src="getImage (1).jpg" class="rounded mx-auto d-block" height="200px">
+    <img id="gazo2" src="getImage (3).jpg" class="rounded mx-auto d-block" height="200px">
+    <div class="container">
+        <h1>電卓アプリ</h1>
+        <div class="row">
+            <input id="calc" type="text" value="" class="form-text col-sm-8 text-end">
+        </div>
+        <div class="row">
+            <input type="button" id="btn15" value="Clear" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+        <div class="row">
+            <input type="button" id="btn7" value="7" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn8" value="8" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn9" value="9" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn10" value="/" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+        <div class="row">
+            <input type="button" id="btn4" value="4" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn5" value="5" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn6" value="6" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn11" value="*" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+        <div class="row">
+            <input type="button" id="btn1" value="1" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn2" value="2" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn3" value="3" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn12" value="-" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+        <div class="row">
+            <input type="button" id="btn0" value="0" class="btn btn-light btn-outline-dark col-sm-4">
+            <input type="button" id="btn13" value="=" class="btn btn-light btn-outline-dark col-sm-2" onclick="Calc()">
+            <input type="button" id="btn14" value="+" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+        <div class="row">
+            <input type="button" id="btn16" value="." class="btn btn-light btn-outline-dark col-sm-4">
+            <input type="button" id="btn17" value="(" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn18" value=")" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+        <div class="row">
+            <input type="button" id="btn19" value="000" class="btn btn-light btn-outline-dark col-sm-4">
+            <input type="button" id="btn20" value="√" class="btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn21" value="ランダム0-9999" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+        <div class="row">
+            <input type="button" id="btn22" value="楓浜ランダム" class="btn btn-light btn-outline-dark col-sm-4">
+            <input type="button" id="btn23" value="一文字消す" class="bg-danger btn btn-light btn-outline-dark col-sm-2">
+            <input type="button" id="btn24" value="ランダム0-9" class="btn btn-light btn-outline-dark col-sm-2">
+        </div>
+    </div>
+    
+
+    <script src="calc.js"></script>
+</body>
+
+</html>

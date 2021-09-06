@@ -22,11 +22,17 @@ ck.addEventListener('click',function(){
 let sum = 0;
 quiz.addEventListener('click',function(){
   sum++;
-  // console.log(sum);
+  console.log(sum);
+  
   if(sum>0){
-
+    let gazo2 = document.createElement('img');
+     attrs[0].value='tako.png';
+    let a = attrs[0].value;
+    gazo2.src =  a;
+    let list =document.getElementById('list');
+    list.appendChild(gazo);
   }else{
-    
+    console.log('画像は押されていません。');
   }
 });
 

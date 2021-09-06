@@ -24,13 +24,13 @@ quiz.addEventListener('click',function(){
   sum++;
   console.log(sum);
   
-  if(sum>0){
+  if(sum>10){
     let gazo2 = document.createElement('img');
      attrs[0].value='tako.png';
     let a = attrs[0].value;
     gazo2.src =  a;
     let list =document.getElementById('list');
-    list.appendChild(gazo);
+    list.appendChild(gazo2);
   }else{
     console.log('画像は押されていません。');
   }
